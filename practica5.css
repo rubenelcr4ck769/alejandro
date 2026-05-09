@@ -1,0 +1,50 @@
+body {
+  padding-left: 11em;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #e0e0e0;
+  background-color: #121212;
+}
+
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  width: 9em;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: red;
+}
+
+ul.navbar li {
+  background: #1f1f1f;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-right: 1em solid #ff006e;
+  border-radius: 8px;
+}
+
+ul.navbar a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+a:link {
+  color: #4cc9f0;
+}
+
+a:visited {
+  color: #b5179e;
+}
+
+address {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: thin dotted #444;
+  color: #bbbbbb;
+}
