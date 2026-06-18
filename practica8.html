@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Práctica 8</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
+}
+h1{
+    font-size: 26px;
+}
+h2{
+    font-size: 20px;
+    margin-top: 30px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* --- Estilos del ejercicio (aplicados dentro de .demo para no afectar el resto del sitio) --- */
+.demo{
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.demo body{
+    color: blue;
+    background-color: #F3F781;
+}
+.demo{
+    background-color: #F3F781;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.demo h1.titulo-demo{
+    font-family: Helvetica, Geneva, Arial, "SunSans-Regular", sans-serif;
+}
+.demo p{
+    color: blue;
+    text-align: left;
+}
+
+.navbar{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.navbar li{
+    background: white;
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border-right: 1em solid black;
+    text-decoration: none;
+}
+.navbar li a:link{
+    color: blue;
+}
+.navbar li a:visited{
+    color: purple;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Práctica 8: Apariencia del texto, listas e hipervínculos con CSS</h1>
+
+<div class="demo">
+
+    <ul class="navbar">
+        <li><a href="#">Página principal</a></li>
+        <li><a href="#">Altas</a></li>
+        <li><a href="#">Bajas</a></li>
+        <li><a href="#">Modificaciones</a></li>
+        <li><a href="#">Consultas</a></li>
+    </ul>
+
+    <h1 class="titulo-demo">Uso de herramientas aplicaciones web</h1>
+
+    <p>¡En este ejemplo haremos uso de hojas de estilo en cascada!</p>
+    <p>¡Daremos formato al texto y a los enlaces!</p>
+    <p>Esta página no cuenta con imágenes, pero contiene enlaces, aunque no te lleven a ningún sitio…</p>
+    <p>Debería haber más cosas aquí, pero es suficiente para lo que necesitamos ejemplificar.</p>
+
+</div>
+
+<h2>Explicación</h2>
+
+<p>
+En esta práctica primero armamos una lista no ordenada con los cinco hipervínculos de navegación
+(Página principal, Altas, Bajas, Modificaciones y Consultas), un encabezado h1 y varios párrafos de
+relleno. Le dimos estilo al selector body cambiando el color de fondo a un amarillo claro (#F3F781)
+y el color del texto a azul, además de cambiar la tipografía general a Georgia y la del encabezado
+h1 a Helvetica. Después transformamos esa misma lista en un menú de navegación más vistoso usando
+una clase llamada navbar: quitamos los puntos con list-style-type none, eliminamos el padding y el
+margin para que los elementos se peguen a la izquierda, y le dimos a cada li un fondo blanco con un
+grueso borde negro del lado derecho. Por último, definimos los pseudoselectores a:link y a:visited
+para que los enlaces se vean azules si no han sido visitados y morados si ya se visitaron.
+</p>
+
+</body>
+</html>

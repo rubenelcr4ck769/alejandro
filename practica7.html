@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Práctica 7</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
+}
+h1{
+    font-size: 26px;
+}
+h2{
+    font-size: 20px;
+    margin-top: 30px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+.cv-form{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px 25px;
+    max-width: 420px;
+    background-color: #f7f7f7;
+}
+.cv-form label{
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+.cv-form input[type="text"],
+.cv-form input[type="password"],
+.cv-form input[type="file"]{
+    width: 100%;
+    padding: 6px 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+.cv-form .sexo{
+    margin-top: 6px;
+}
+.cv-form .sexo label{
+    display: inline;
+    font-weight: normal;
+    margin-right: 15px;
+}
+.cv-form .checkbox-line{
+    margin-top: 12px;
+}
+.cv-form .checkbox-line label{
+    display: inline;
+    font-weight: normal;
+}
+.botones{
+    margin-top: 20px;
+}
+.botones input{
+    margin-right: 8px;
+    padding: 6px 14px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Práctica 7: Creación de formularios con código HTML5</h1>
+
+<h2>Formulario: Introducir Curriculum Vitae</h2>
+
+<form class="cv-form" action="/php/insertar_cv.php" method="POST">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" maxlength="30">
+
+    <label for="apellidos">Apellidos</label>
+    <input type="text" id="apellidos" name="apellidos" maxlength="80">
+
+    <label for="contrasena">Contraseña</label>
+    <input type="password" id="contrasena" name="contrasena" maxlength="10">
+
+    <label for="curp">CURP</label>
+    <input type="text" id="curp" name="curp" maxlength="18" pattern="[A-Za-z0-9]{18}">
+
+    <div class="sexo">
+        <strong>Sexo</strong><br>
+        <label><input type="radio" name="sexo" value="hombre" checked> Hombre</label>
+        <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
+    </div>
+
+    <label for="foto">Subir fotografía</label>
+    <input type="file" id="foto" name="foto">
+
+    <div class="checkbox-line">
+        <label><input type="checkbox" name="boletin" checked> Suscribirme al boletín de novedades</label>
+    </div>
+
+    <div class="botones">
+        <input type="submit" value="Guardar cambios">
+        <input type="reset" value="Borrar los datos introducidos">
+    </div>
+
+</form>
+
+<h2>Explicación</h2>
+
+<p>
+Para este formulario elegimos el método POST en lugar de GET, ya que se están capturando datos
+sensibles como la contraseña y no queremos que viajen visibles en la URL del navegador. El atributo
+action apunta a la carpeta php del servidor, al archivo insertar_cv.php, que sería el encargado de
+procesar la información en el backend. Usamos el atributo maxlength para limitar el nombre a 30
+caracteres, los apellidos a 80 y la contraseña a 10, tal como lo pedía el ejercicio. Para el CURP
+se definió un patrón de 18 caracteres alfanuméricos, que es la longitud real de este documento en
+México. El checkbox del boletín de novedades se dejó marcado por defecto usando el atributo checked.
+Finalmente se agregaron los tres botones solicitados: el campo de tipo file para subir la fotografía,
+un botón submit para guardar los cambios y un botón reset para borrar todo lo que el usuario haya
+introducido.
+</p>
+
+</body>
+</html>

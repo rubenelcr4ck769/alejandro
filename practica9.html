@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Práctica 9</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
+}
+h1{
+    font-size: 26px;
+}
+h2{
+    font-size: 20px;
+    margin-top: 30px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#conteiner{
+    border: 1px solid #999;
+    max-width: 750px;
+}
+
+#header{
+    background-color: #c8893a;
+    color: white;
+    padding: 14px 20px;
+    font-size: 20px;
+}
+
+.cuerpo{
+    display: flex;
+}
+
+#izquierda{
+    width: 25%;
+    border-right: 1px solid #999;
+    padding: 12px;
+}
+#izquierda ul{
+    list-style-type: disc;
+    padding-left: 18px;
+    margin: 0;
+}
+#izquierda li{
+    margin-bottom: 6px;
+}
+#izquierda a{
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+#derecha{
+    width: 25%;
+    background-color: #fdf6d8;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.centro{
+    width: 50%;
+    padding: 12px;
+}
+.centro h3{
+    color: #1a0dab;
+    margin-top: 0;
+}
+.centro p.subtitulo{
+    color: #555;
+    font-weight: bold;
+}
+.centro p.relleno{
+    color: #777;
+    margin: 4px 0;
+}
+
+#footer{
+    text-align: center;
+    border-top: 1px solid #999;
+    padding: 10px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Práctica 9: Definición de marcos para el diseño de páginas web con CSS</h1>
+
+<div id="conteiner">
+
+    <div id="header">Uso de herramientas para aplicaciones web</div>
+
+    <div class="cuerpo">
+
+        <div id="izquierda">
+            <ul>
+                <li><a href="#">Hipervínculo 01</a></li>
+                <li><a href="#">Hipervínculo 02</a></li>
+                <li><a href="#">Hipervínculo 03</a></li>
+                <li><a href="#">Hipervínculo 04</a></li>
+                <li><a href="#">Hipervínculo 05</a></li>
+            </ul>
+        </div>
+
+        <div class="centro">
+            <h3>Título del contenido</h3>
+            <p class="subtitulo">Subtítulo</p>
+            <p class="relleno">Escribo algo para rellenar...</p>
+            <p class="relleno">Escribo algo para rellenar...</p>
+            <p class="relleno">Escribo algo para rellenar...</p>
+            <p class="relleno">Escribo algo para rellenar...</p>
+        </div>
+
+        <div id="derecha">
+            Aquí puede insertar imágenes, anuncios, noticias, mas enlaces, etc...
+        </div>
+
+    </div>
+
+    <div id="footer">PIE DE PÁGINA DEL SITIO WEB</div>
+
+</div>
+
+<h2>Explicación</h2>
+
+<p>
+En esta práctica el objetivo fue armar la maquetación clásica de un sitio web usando únicamente
+HTML y CSS, sin tablas ni frames. Definimos un marco principal con id conteiner que envuelve todo
+el sitio, un marco superior con id header para el título naranja, y dentro del cuerpo dividimos el
+espacio en tres columnas usando flexbox: una columna izquierda con id izquierda que contiene la
+lista de hipervínculos, una columna central que muestra el título y subtítulo del contenido, y una
+columna derecha con id derecha pintada de amarillo claro para simular un espacio de anuncios o
+imágenes. Finalmente, el marco inferior con id footer cierra el diseño con el pie de página del
+sitio. Esta forma de maquetar con divs identificados por id es la base de cómo se estructuran los
+sitios web profesionales antes de pasar a frameworks más modernos.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Práctica 11</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
+}
+h1.titulo-practica{
+    font-size: 26px;
+}
+h2.subtitulo{
+    font-size: 20px;
+    margin-top: 36px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+.ejemplo{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 14px 0 24px 0;
+    background-color: #f7f7f7;
+}
+
+/* ---------- Ejemplo 1 ---------- */
+.ejemplo1{
+    counter-reset: section;
+}
+.ejemplo1 h2::before{
+    counter-increment: section;
+    content: "Seccion " counter(section) ": ";
+}
+
+/* ---------- Ejemplo 2 ---------- */
+.ejemplo2{
+    counter-reset: section;
+}
+.ejemplo2 h1{
+    font-size: 18px;
+    counter-reset: subsection;
+}
+.ejemplo2 h1::before{
+    counter-increment: section;
+    content: "Seccion " counter(section) ": ";
+}
+.ejemplo2 h2{
+    font-size: 16px;
+    font-weight: normal;
+    margin: 4px 0 4px 20px;
+}
+.ejemplo2 h2::before{
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+}
+
+/* ---------- Ejemplo 3 ---------- */
+.ejemplo3 ol{
+    counter-reset: section;
+    list-style-type: none;
+}
+.ejemplo3 li::before{
+    counter-increment: section;
+    content: counters(section, ".") " ";
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="titulo-practica">Práctica 11: Contadores en CSS (counter-reset y counters)</h1>
+
+<h2 class="subtitulo">Ejemplo 1: Contador simple con counter-reset y counter-increment</h2>
+<div class="ejemplo ejemplo1">
+    <h1>Using CSS counters</h1>
+    <h2>HTML Tutorial</h2>
+    <h2>Css Tutorial</h2>
+    <h2>JavaScript Tutorial</h2>
+    <h2>Python Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+</div>
+
+<h2 class="subtitulo">Ejemplo 2: Dos contadores anidados (sección y subsección)</h2>
+<div class="ejemplo ejemplo2">
+    <h1>Tutoriales de HTML/CSS</h1>
+    <h2>HTML</h2>
+    <h2>CSS</h2>
+    <h2>Bootstrap</h2>
+    <h2>W3.CSS</h2>
+    <h1>Tutoriales de lenguaje</h1>
+    <h2>JavaScript</h2>
+    <h2>jQuery</h2>
+    <h2>React</h2>
+    <h1>Tutoriales de Programación</h1>
+    <h2>Python</h2>
+    <h2>Java</h2>
+    <h2>C++</h2>
+</div>
+
+<h2 class="subtitulo">Ejemplo 3: Numeración jerárquica con counters() en listas anidadas</h2>
+<div class="ejemplo ejemplo3">
+    <ol>
+        <li>item</li>
+        <li>item</li>
+        <li>item
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>item
+                    <ol>
+                        <li>item</li>
+                        <li>item</li>
+                        <li>item</li>
+                    </ol>
+                </li>
+                <li>item</li>
+            </ol>
+        </li>
+        <li>item</li>
+        <li>item</li>
+    </ol>
+    <ol>
+        <li>item</li>
+        <li>item</li>
+    </ol>
+</div>
+
+<h2 class="subtitulo">Explicación</h2>
+
+<p>
+En esta práctica trabajamos con contadores en CSS, una herramienta que permite numerar elementos de
+forma automática sin tener que escribir los números a mano en el HTML. En el primer ejemplo usamos
+counter-reset en el body para inicializar un contador llamado section, y luego, con el pseudo-elemento
+h2::before y la propiedad counter-increment, fuimos aumentando ese contador cada vez que aparecía un
+nuevo h2, mostrando el texto "Seccion" seguido del número correspondiente. En el segundo ejemplo se
+combinaron dos contadores: section, que se reinicia y aumenta en cada h1, y subsection, que se reinicia
+dentro de cada h1 y aumenta en cada h2, logrando una numeración tipo 1.1, 1.2, 2.1, etc. Por último, en
+el tercer ejemplo usamos la función counters() en lugar de counter(), la cual sirve específicamente
+para listas anidadas: toma todos los valores del contador en cada nivel de anidación y los une con el
+separador que le indiquemos (en este caso un punto), generando automáticamente una numeración
+jerárquica como 1, 1.1, 1.1.1, 1.2, 2, sin necesidad de escribir manualmente los números en cada li.
+</p>
+
+</body>
+</html>

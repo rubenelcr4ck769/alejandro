@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Práctica 10</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
+}
+h1.titulo-practica{
+    font-size: 26px;
+}
+h2.subtitulo{
+    font-size: 20px;
+    margin-top: 36px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+.ejemplo{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 14px 0 24px 0;
+    background-color: #f7f7f7;
+}
+.ejemplo h3{
+    margin-top: 0;
+}
+#resultado, #demo1, #demo2{
+    font-weight: bold;
+}
+#reloj{
+    font-size: 22px;
+    font-weight: bold;
+    color: #c8893a;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="titulo-practica">Práctica 10: Bucles for...in, for...of y manejo de fechas en JavaScript</h1>
+
+<h2 class="subtitulo">Ejemplo 1: Bucle for...in (recorrer un arreglo por índices)</h2>
+<div class="ejemplo">
+    <h3>Bucle For in</h3>
+    <p id="resultado"></p>
+</div>
+
+<h2 class="subtitulo">Ejemplo 2: Bucle for...of (recorrer los caracteres de un texto)</h2>
+<div class="ejemplo">
+    <h3>Bucle JavaScript For of</h3>
+    <p>La declaración for...of recorre los valores de cualquier objeto iterable:</p>
+    <p id="demo1"></p>
+</div>
+
+<h2 class="subtitulo">Ejemplo 3: Bucle for...of (recorrer un arreglo de elementos)</h2>
+<div class="ejemplo">
+    <h3>Bucle JavaScript For of</h3>
+    <p>La declaración for...of recorre los valores de cualquier objeto iterable:</p>
+    <p id="demo2"></p>
+</div>
+
+<h2 class="subtitulo">Ejemplo 4: Ejercicio horas, minutos y segundos</h2>
+<div class="ejemplo">
+    <h3>Reloj con la fecha actual del sistema</h3>
+    <p id="reloj"></p>
+</div>
+
+<h2 class="subtitulo">Explicación</h2>
+
+<p>
+En esta práctica trabajamos con dos formas distintas de recorrer estructuras de datos en JavaScript.
+El bucle for...in recorre las propiedades enumerables de un objeto o, en el caso de un arreglo, sus
+índices (0, 1, 2, 3...), por eso en el primer ejemplo la variable x toma el valor del índice y hay
+que usar numbers[x] para obtener el dato real. En cambio, el bucle for...of recorre directamente los
+valores de un objeto iterable, ya sea un arreglo de elementos como los coches, o incluso una cadena
+de texto carácter por carácter, como se ve en el segundo ejemplo con el nombre "Sarai Martin". En
+ambos casos se va concatenando el resultado en una variable de texto y al final se inyecta en el
+documento usando innerHTML sobre un elemento con id específico. Por último, el cuarto ejemplo usa el
+objeto Date de JavaScript para obtener la hora, los minutos y los segundos actuales del sistema con
+getHours, getMinutes y getSeconds, y aplica una validación con if para anteponer un cero cuando el
+valor es menor a 10, logrando así un formato de reloj de dos dígitos como 09:05:03.
+</p>
+
+<script>
+// Ejemplo 1: for...in
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+for (let x in numbers) {
+    txt += numbers[x] + " ";
+}
+document.getElementById("resultado").innerHTML = txt;
+
+// Ejemplo 2: for...of con un string
+let language = "Sarai Martin";
+let text1 = "";
+for (let x of language) {
+    text1 += x + "<br>";
+}
+document.getElementById("demo1").innerHTML = text1;
+
+// Ejemplo 3: for...of con un arreglo
+const coches = ["Nissan", "Chevrolet", "Ford"];
+let text2 = "";
+for (let x of coches) {
+    text2 += x + "<br>";
+}
+document.getElementById("demo2").innerHTML = text2;
+
+// Ejemplo 4: reloj con horas, minutos y segundos
+function actualizarReloj() {
+    var fecha = new Date();
+    var hora = fecha.getHours();
+    var minutos = fecha.getMinutes();
+    var segundos = fecha.getSeconds();
+
+    if (hora < 10) { hora = "0" + hora; }
+    if (minutos < 10) { minutos = "0" + minutos; }
+    if (segundos < 10) { segundos = "0" + segundos; }
+
+    document.getElementById("reloj").innerHTML = "Son las " + hora + ":" + minutos + ":" + segundos;
+}
+actualizarReloj();
+setInterval(actualizarReloj, 1000);
+</script>
+
+</body>
+</html>
