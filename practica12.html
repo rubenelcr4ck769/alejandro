@@ -1,173 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Práctica 12 | Base de Datos MySQL</title>
-
-<style>
-
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:linear-gradient(135deg,#eff6ff,#dbeafe);
-color:#333;
-line-height:1.8;
-}
-
-/* HEADER */
-header{
-background:linear-gradient(135deg,#1d4ed8,#1e3a8a);
-color:white;
-text-align:center;
-padding:45px 20px;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
-
-header h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:18px;
-opacity:.95;
-}
-
-/* CONTENEDOR */
-.container{
-width:90%;
-max-width:1100px;
-margin:40px auto;
-}
-
-/* CARD */
-.card{
-background:white;
-padding:35px;
-border-radius:18px;
-margin-bottom:35px;
-box-shadow:0 10px 25px rgba(0,0,0,.12);
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-/* TITULOS */
-h2{
-color:#1d4ed8;
-border-left:6px solid #2563eb;
-padding-left:12px;
-margin-bottom:20px;
-}
-
-/* TEXTO */
-p{
-font-size:17px;
-text-align:justify;
-margin-bottom:15px;
-}
-
-/* IMAGEN */
-.imagen{
-text-align:center;
-margin-top:20px;
-}
-
-.imagen img{
-width:100%;
-max-width:500px;
-border-radius:15px;
-box-shadow:0 8px 18px rgba(0,0,0,.20);
-transition:.4s;
-}
-
-.imagen img:hover{
-transform:scale(1.03);
-}
-
-/* FOOTER */
-footer{
-background:#1e3a8a;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-header h1{
-font-size:30px;
-}
-
-.card{
-padding:22px;
-}
-
-}
-
-</style>
-
 </head>
-
 <body>
 
 <header>
-
-<h1>📄 Práctica 12</h1>
+<h1>Práctica 12</h1>
 <p>Base de Datos MySQL - Creación de Tabla</p>
-
 </header>
 
 <div class="container">
 
 <!-- DESCRIPCIÓN -->
 <div class="card">
-
 <h2>Descripción de la práctica</h2>
-
 <p>
 En esta práctica se realiza la creación de una tabla en MySQL llamada <strong>usuarios</strong>, la cual permite almacenar información básica como nombre, domicilio, correo electrónico y contraseña, además de la fecha de registro.
 </p>
-
 </div>
 
 <!-- IMAGEN -->
 <div class="card">
-
 <h2>Evidencia de la práctica</h2>
-
 <div class="imagen">
-
 <img src="practica121.jpg" alt="Practica 12">
-
 </div>
-
 </div>
 
 <!-- EXPLICACIÓN -->
 <div class="card">
-
 <h2>Explicación del código SQL</h2>
-
 <p>
 <strong>Creación de la tabla usuarios</strong><br>
 Se utiliza el comando CREATE TABLE para definir una estructura en la base de datos donde se almacenará la información de los usuarios.
 </p>
-
 <p>
 <strong>Campos de la tabla:</strong><br>
 - id_usuario: Identificador único de cada usuario, autoincremental.<br>
@@ -177,37 +46,25 @@ Se utiliza el comando CREATE TABLE para definir una estructura en la base de dat
 - contraseña: Almacena la contraseña en formato seguro.<br>
 - fecha_registro: Guarda automáticamente la fecha de creación del registro.
 </p>
-
 <p>
 <strong>Llave primaria:</strong><br>
 El campo id_usuario es la clave primaria, lo que significa que identifica de manera única cada registro dentro de la tabla.
 </p>
-
-</div>
-
-
-
 </div>
 
 <!-- CONCLUSIÓN -->
 <div class="card">
-
 <h2>Conclusión</h2>
-
 <p>
 La creación de tablas en MySQL es fundamental para estructurar una base de datos correctamente. En este caso, la tabla usuarios permite almacenar información organizada y lista para ser utilizada en sistemas web o aplicaciones.
 </p>
-
 </div>
 
 </div>
 
 <footer>
-
-Práctica 12 • Base de Datos MySQL
-
+<p>Práctica 12 • Base de Datos MySQL</p>
 </footer>
 
 </body>
-
 </html>
