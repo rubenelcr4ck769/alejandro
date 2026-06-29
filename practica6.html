@@ -1,53 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Práctica 6</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Práctica 6 | Integración de HTML y CSS</title>
+
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    margin: 20px 30px;
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(135deg,#ecfdf5,#d1fae5);
+color:#333;
+line-height:1.8;
 }
-h1{
-    font-size: 26px;
+
+header{
+background:linear-gradient(135deg,#10b981,#047857);
+color:white;
+text-align:center;
+padding:45px 20px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
+
+header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+opacity:.95;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:40px auto;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:18px;
+margin-bottom:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
 h2{
-    font-size: 20px;
-    margin-top: 30px;
+color:#047857;
+margin-bottom:18px;
+border-left:6px solid #10b981;
+padding-left:12px;
 }
-img{
-    max-width: 100%;
-    border: 1px solid #ccc;
-    margin: 6px 0;
-}
+
 p{
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: justify;
+font-size:17px;
+text-align:justify;
 }
+
+.info{
+background:#ecfdf5;
+border-left:6px solid #10b981;
+padding:20px;
+border-radius:10px;
+margin-top:25px;
+}
+
+.lista{
+background:#f8fafc;
+padding:20px;
+border-radius:12px;
+border:1px solid #d1d5db;
+margin-top:20px;
+}
+
+.lista ul{
+margin-left:25px;
+line-height:2;
+}
+
+.imagen{
+text-align:center;
+margin-top:20px;
+}
+
+.imagen img{
+width:100%;
+max-width:700px;
+border-radius:15px;
+box-shadow:0 8px 18px rgba(0,0,0,.20);
+transition:.4s;
+}
+
+.imagen img:hover{
+transform:scale(1.03);
+}
+
+footer{
+background:#065f46;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+.card{
+padding:22px;
+}
+
+p{
+font-size:16px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<h1>Práctica 6: Integración de HTML y CSS</h1>
+<header>
 
-<img src="practica6.png" width="500">
+<h1>🌐 Práctica 6</h1>
 
-<h2>Explicación</h2>
+<p>Integración de HTML y CSS</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Descripción de la práctica</h2>
 
 <p>
-Para esta última práctica, el reto fue consolidar e integrar absolutamente todo lo aprendido en los
-ejercicios anteriores para dar vida a un sitio web completo y con un aspecto mucho más formal. Utilizamos
-las etiquetas de HTML para armar todo el esqueleto y el contenido, incluyendo títulos, imágenes con img
-y enlaces de navegación con a. Lo interesante fue usar el archivo practica6.css para tomar el control
-total de la maquetación en pantalla. En lugar de que todo saliera hacia abajo en una sola columna,
-acomodamos los elementos de forma estratégica para dividir la interfaz en áreas comunes de un sitio
-profesional: un encabezado en la parte superior, un menú para moverse por la web, el bloque para
-contenido principal, una barra lateral para información extra y el clásico pie de página al final.
-Esto nos dejó claro cómo HTML y CSS trabajan en equipo para lograr páginas web funcionales y bien
-organizadas.
+
+En esta práctica se integran los conocimientos adquiridos de HTML y CSS para construir una página web más completa, organizada y con una apariencia profesional.
+
+<br><br>
+
+Se utilizan encabezados para mostrar títulos y secciones importantes, enlaces mediante la etiqueta <strong>&lt;a&gt;</strong> para facilitar la navegación y la etiqueta <strong>&lt;img&gt;</strong> para incorporar imágenes dentro del contenido.
+
+<br><br>
+
+La estructura general de la página se divide en diferentes áreas como encabezado, menú de navegación, contenido principal, sección lateral y pie de página. El diseño visual es controlado mediante el archivo <strong>practica6.css</strong>, donde se definen colores, tamaños, márgenes, posiciones y la distribución de los elementos.
+
+<br><br>
+
+Esta práctica permite comprender cómo HTML proporciona la estructura del sitio mientras que CSS se encarga de mejorar su apariencia visual y organización.
+
 </p>
 
+<div class="info">
+
+<strong>Objetivo:</strong>
+
+Desarrollar una página web funcional y organizada mediante la integración de HTML y CSS, comprendiendo el papel que desempeña cada tecnología en la construcción de un sitio web.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Etiquetas y propiedades utilizadas</h2>
+
+<div class="lista">
+
+<ul>
+
+<li><strong>&lt;header&gt;</strong> → Define el encabezado del sitio.</li>
+
+<li><strong>&lt;a&gt;</strong> → Crea enlaces de navegación.</li>
+
+<li><strong>&lt;img&gt;</strong> → Inserta imágenes.</li>
+
+<li><strong>&lt;div&gt;</strong> → Organiza el contenido en secciones.</li>
+
+<li><strong>&lt;footer&gt;</strong> → Representa el pie de página.</li>
+
+<li><strong>background</strong> → Define el fondo del sitio.</li>
+
+<li><strong>color</strong> → Cambia el color del texto.</li>
+
+<li><strong>margin</strong> → Controla el espacio exterior entre elementos.</li>
+
+<li><strong>padding</strong> → Agrega espacio interno.</li>
+
+<li><strong>display</strong> → Controla la distribución de los elementos.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Evidencia de la práctica</h2>
+
+<div class="imagen">
+
+<img src="practica6.jpg" alt="Práctica 6">
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Conclusión</h2>
+
+<p>
+
+La integración de HTML y CSS permite desarrollar páginas web completas, organizadas y visualmente atractivas. Mientras HTML define la estructura y el contenido del sitio, CSS aporta el diseño y la presentación, logrando interfaces más profesionales, fáciles de mantener y con una mejor experiencia para el usuario.
+
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+Práctica 6 • Desarrollo Web con HTML y CSS
+
+</footer>
+
 </body>
+
 </html>

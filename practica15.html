@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Práctica 15 | Login y Perfil</title>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#eff6ff,#dbeafe);
+color:#333;
+line-height:1.8;
+}
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#1d4ed8,#1e3a8a);
+color:white;
+text-align:center;
+padding:45px 20px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+opacity:.95;
+}
+
+/* CONTENEDOR */
+.container{
+width:90%;
+max-width:1100px;
+margin:40px auto;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:35px;
+border-radius:18px;
+margin-bottom:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+/* TITULOS */
+h2{
+color:#1d4ed8;
+border-left:6px solid #2563eb;
+padding-left:12px;
+margin-bottom:20px;
+}
+
+/* TEXTO */
+p{
+font-size:17px;
+text-align:justify;
+margin-bottom:15px;
+}
+
+/* IMAGEN */
+.imagen{
+text-align:center;
+margin-top:20px;
+}
+
+.imagen img{
+width:100%;
+max-width:500px;
+border-radius:15px;
+box-shadow:0 8px 18px rgba(0,0,0,.20);
+margin-bottom:15px;
+}
+
+/* FOOTER */
+footer{
+background:#1e3a8a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>📄 Práctica 15</h1>
+<p>Sistema de Inicio de Sesión y Perfil con PHP y MySQL</p>
+
+</header>
+
+<div class="container">
+
+<!-- DESCRIPCIÓN -->
+<div class="card">
+
+<h2>Descripción de la práctica</h2>
+
+<p>
+En esta práctica se desarrolla un sistema completo de autenticación de usuarios utilizando PHP y MySQL. El sistema permite que un usuario pueda iniciar sesión, mantener su información activa mediante sesiones y visualizar un perfil personalizado con sus datos almacenados.
+</p>
+
+<p>
+Este tipo de sistemas es la base de la mayoría de aplicaciones web modernas, ya que permite controlar el acceso a usuarios y manejar información de forma segura y organizada.
+</p>
+
+</div>
+
+<!-- FUNCIONAMIENTO -->
+<div class="card">
+
+<h2>Funcionamiento del sistema</h2>
+
+<p>
+El sistema utiliza <strong>PHP con sesiones (session_start)</strong> para guardar la información del usuario cuando inicia sesión. Estos datos se almacenan temporalmente en el servidor mientras la sesión está activa.
+</p>
+
+<p>
+Cuando el usuario introduce sus datos en el formulario de login, el sistema los compara con los registros de la base de datos. Si son correctos, se crea una sesión con la información del usuario.
+</p>
+
+<p>
+Después del inicio de sesión, el sistema redirige al perfil, donde se muestran datos como nombre, correo, tipo de usuario y estadísticas básicas como pedidos o actividad.
+</p>
+
+<p>
+También se incluye la función de cerrar sesión, la cual elimina los datos de la sesión y regresa al estado inicial del sistema.
+</p>
+
+</div>
+
+<!-- BASE DE DATOS -->
+<div class="card">
+
+<h2>Conexión a base de datos</h2>
+
+<p>
+La base de datos es fundamental en este sistema, ya que almacena la información de los usuarios registrados. PHP se conecta a MySQL para consultar y validar los datos ingresados en el login.
+</p>
+
+<p>
+Esta conexión permite que el sistema sea dinámico, es decir, que los datos no estén fijos en el código, sino que puedan cambiar según los usuarios registrados.
+</p>
+
+</div>
+
+<!-- IMÁGENES -->
+<div class="card">
+
+<h2>Evidencia de la práctica</h2>
+
+<div class="imagen">
+
+<img src="practica151.jpg" alt="Login">
+
+<img src="practica152.jpg" alt="Perfil">
+
+<img src="practica153.jpg" alt="Sistema">
+
+</div>
+
+</div>
+
+<!-- CONCLUSIÓN -->
+<div class="card">
+
+<h2>Conclusión</h2>
+
+<p>
+Esta práctica permite comprender cómo funciona un sistema real de autenticación en aplicaciones web, integrando HTML, CSS, PHP y bases de datos.
+</p>
+
+<p>
+Se aprende cómo gestionar sesiones, proteger información del usuario y mostrar contenido dinámico dependiendo del estado de inicio de sesión.
+</p>
+
+<p>
+Es un paso importante para el desarrollo de sistemas web más avanzados como redes sociales, tiendas en línea o paneles de administración.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+Práctica 15 • Sistema de Login
+
+</footer>
+
+</body>
+
+</html>

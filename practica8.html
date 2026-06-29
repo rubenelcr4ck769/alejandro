@@ -1,104 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Práctica 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Práctica 8 | Contadores en CSS</title>
+
 <style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    margin: 20px 30px;
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(135deg,#eff6ff,#dbeafe);
+color:#333;
+line-height:1.8;
 }
-h1{
-    font-size: 26px;
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#1d4ed8,#1e3a8a);
+color:white;
+text-align:center;
+padding:45px 20px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
+
+header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+opacity:.95;
+}
+
+/* CONTENEDOR */
+.container{
+width:90%;
+max-width:1100px;
+margin:40px auto;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:35px;
+border-radius:18px;
+margin-bottom:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* TITULOS */
 h2{
-    font-size: 20px;
-    margin-top: 30px;
+color:#1d4ed8;
+border-left:6px solid #2563eb;
+padding-left:12px;
+margin-bottom:20px;
 }
+
+/* TEXTO */
 p{
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: justify;
+font-size:17px;
+text-align:justify;
+margin-bottom:15px;
 }
 
-/* --- Estilos del ejercicio (aplicados dentro de .demo para no afectar el resto del sitio) --- */
-.demo{
-    border: 1px solid #ccc;
-    padding: 20px;
-}
-.demo body{
-    color: blue;
-    background-color: #F3F781;
-}
-.demo{
-    background-color: #F3F781;
-    font-family: Georgia, "Times New Roman", Times, serif;
-}
-.demo h1.titulo-demo{
-    font-family: Helvetica, Geneva, Arial, "SunSans-Regular", sans-serif;
-}
-.demo p{
-    color: blue;
-    text-align: left;
+/* IMAGENES */
+.imagen{
+text-align:center;
+margin-top:20px;
 }
 
-.navbar{
-    list-style-type: none;
-    padding: 0;
-    margin: 0 0 20px 0;
+.imagen img{
+width:100%;
+max-width:500px;
+border-radius:15px;
+box-shadow:0 8px 18px rgba(0,0,0,.20);
+margin-bottom:20px;
+transition:.4s;
 }
-.navbar li{
-    background: white;
-    margin: 0.5em 0;
-    padding: 0.3em;
-    border-right: 1em solid black;
-    text-decoration: none;
+
+.imagen img:hover{
+transform:scale(1.03);
 }
-.navbar li a:link{
-    color: blue;
+
+/* FOOTER */
+footer{
+background:#1e3a8a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
 }
-.navbar li a:visited{
-    color: purple;
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
 }
+
+.card{
+padding:22px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<h1>Práctica 8: Apariencia del texto, listas e hipervínculos con CSS</h1>
+<header>
 
-<div class="demo">
+<h1>📄 Práctica 8</h1>
+<p>Contadores en CSS (Lineales, Jerárquicos y Anidados)</p>
 
-    <ul class="navbar">
-        <li><a href="#">Página principal</a></li>
-        <li><a href="#">Altas</a></li>
-        <li><a href="#">Bajas</a></li>
-        <li><a href="#">Modificaciones</a></li>
-        <li><a href="#">Consultas</a></li>
-    </ul>
+</header>
 
-    <h1 class="titulo-demo">Uso de herramientas aplicaciones web</h1>
+<div class="container">
 
-    <p>¡En este ejemplo haremos uso de hojas de estilo en cascada!</p>
-    <p>¡Daremos formato al texto y a los enlaces!</p>
-    <p>Esta página no cuenta con imágenes, pero contiene enlaces, aunque no te lleven a ningún sitio…</p>
-    <p>Debería haber más cosas aquí, pero es suficiente para lo que necesitamos ejemplificar.</p>
+<div class="card">
+
+<h2>Descripción de la práctica</h2>
+
+<p>
+En esta práctica se analizan diferentes formas de utilizar los contadores en CSS, los cuales permiten numerar elementos de forma automática sin necesidad de escribir los números manualmente en el HTML.
+</p>
 
 </div>
 
-<h2>Explicación</h2>
+<div class="card">
+
+<h2>Evidencias de la práctica</h2>
+
+<div class="imagen">
+
+<img src="practica8.jpg" alt="Practica 8 imagen 1">
+<img src="practica82.jpg" alt="Practica 8 imagen 2">
+<img src="practica83.jpg" alt="Practica 8 imagen 3">
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Explicación del código</h2>
 
 <p>
-En esta práctica primero armamos una lista no ordenada con los cinco hipervínculos de navegación
-(Página principal, Altas, Bajas, Modificaciones y Consultas), un encabezado h1 y varios párrafos de
-relleno. Le dimos estilo al selector body cambiando el color de fondo a un amarillo claro (#F3F781)
-y el color del texto a azul, además de cambiar la tipografía general a Georgia y la del encabezado
-h1 a Helvetica. Después transformamos esa misma lista en un menú de navegación más vistoso usando
-una clase llamada navbar: quitamos los puntos con list-style-type none, eliminamos el padding y el
-margin para que los elementos se peguen a la izquierda, y le dimos a cada li un fondo blanco con un
-grueso borde negro del lado derecho. Por último, definimos los pseudoselectores a:link y a:visited
-para que los enlaces se vean azules si no han sido visitados y morados si ya se visitaron.
+<strong>Código 1: Contador lineal simple</strong><br>
+Se utiliza counter-reset para iniciar un contador y counter-increment para aumentarlo cada vez que aparece un elemento h2.
 </p>
 
+<p>
+<strong>Código 2: Secciones y subsecciones dinámicas</strong><br>
+Se manejan dos contadores: uno principal y uno secundario, generando numeraciones como 1.1, 2.1, etc.
+</p>
+
+<p>
+<strong>Código 3: Contadores anidados</strong><br>
+Se utiliza la función counters() para crear jerarquías automáticas como 1.1.1 o 2.3.1.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Conclusión</h2>
+
+<p>
+Los contadores en CSS permiten automatizar la numeración de contenido, haciendo el código más limpio, organizado y profesional.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+Práctica 8 • Desarrollo Web con HTML y CSS
+
+</footer>
+
 </body>
+
 </html>

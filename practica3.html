@@ -1,47 +1,280 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Práctica 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Práctica 3 | Tablas en HTML</title>
+
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    margin: 20px 30px;
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(135deg,#fff7ed,#ffedd5);
+color:#333;
+line-height:1.8;
 }
-h1{
-    font-size: 26px;
+
+header{
+background:linear-gradient(135deg,#ea580c,#c2410c);
+color:white;
+text-align:center;
+padding:45px 20px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
+
+header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:40px auto;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:18px;
+margin-bottom:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
 h2{
-    font-size: 20px;
-    margin-top: 30px;
+color:#c2410c;
+margin-bottom:18px;
+border-left:6px solid #ea580c;
+padding-left:12px;
 }
-img{
-    max-width: 100%;
-    border: 1px solid #ccc;
-    margin: 6px 0;
-}
+
 p{
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: justify;
+font-size:17px;
+text-align:justify;
 }
+
+.info{
+background:#fff7ed;
+padding:20px;
+border-left:6px solid #ea580c;
+border-radius:10px;
+margin-top:25px;
+}
+
+.imagen{
+text-align:center;
+margin-top:25px;
+}
+
+.imagen img{
+width:100%;
+max-width:700px;
+border-radius:15px;
+box-shadow:0 8px 18px rgba(0,0,0,.20);
+transition:.4s;
+}
+
+.imagen img:hover{
+transform:scale(1.03);
+}
+
+.tabla{
+margin-top:25px;
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#ea580c;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+border:1px solid #ddd;
+}
+
+tr:nth-child(even){
+background:#f8f8f8;
+}
+
+footer{
+background:#9a3412;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+.card{
+padding:22px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<h1>Práctica 3: Tablas en HTML</h1>
+<header>
 
-<img src="practica3.png" width="500">
+<h1>Práctica 3</h1>
 
-<h2>Explicación</h2>
+<p>Tablas en HTML</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Descripción de la práctica</h2>
 
 <p>
-En esta práctica aprendimos a acomodar datos en filas y columnas usando la etiqueta table.
-Para armarla, usamos tr para crear cada fila y td para meter el contenido dentro de las celdas.
-También usamos th para poner títulos llamativos en la parte de arriba de la tabla y el atributo
-border para que las líneas divisorias se alcancen a ver.
+
+En esta práctica se aprende a crear tablas utilizando HTML para organizar información en filas y columnas. Las tablas son una herramienta muy útil cuando se desea mostrar datos de manera estructurada y facilitar su interpretación.
+
+<br><br>
+
+La estructura principal se crea mediante la etiqueta <strong>&lt;table&gt;</strong>, la cual contiene todos los elementos de la tabla.
+
+<br><br>
+
+Las filas se generan utilizando la etiqueta <strong>&lt;tr&gt;</strong>, mientras que las celdas donde se almacena la información se crean mediante la etiqueta <strong>&lt;td&gt;</strong>. Para los encabezados se utiliza la etiqueta <strong>&lt;th&gt;</strong>, la cual permite destacar la información principal de cada columna.
+
+<br><br>
+
+Además, pueden emplearse atributos como <strong>border</strong> para agregar bordes y mejorar la presentación de los datos. También es posible crear tablas simples y tablas más complejas para organizar información de diferentes maneras.
+
+<div class="info">
+
+<strong>Objetivo:</strong>
+
+Comprender la estructura y funcionamiento de las tablas en HTML para organizar datos de manera clara, ordenada y profesional dentro de una página web.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Etiquetas utilizadas</h2>
+
+<div class="tabla">
+
+<table>
+
+<tr>
+
+<th>Etiqueta</th>
+<th>Función</th>
+
+</tr>
+
+<tr>
+
+<td>&lt;table&gt;</td>
+<td>Define la tabla completa.</td>
+
+</tr>
+
+<tr>
+
+<td>&lt;tr&gt;</td>
+<td>Crea una fila.</td>
+
+</tr>
+
+<tr>
+
+<td>&lt;th&gt;</td>
+<td>Crea un encabezado para una columna.</td>
+
+</tr>
+
+<tr>
+
+<td>&lt;td&gt;</td>
+<td>Contiene los datos de cada celda.</td>
+
+</tr>
+
+<tr>
+
+<td>border</td>
+<td>Agrega un borde visible a la tabla.</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Evidencia de la práctica</h2>
+
+<div class="imagen">
+
+<img src="practica3.jpg" alt="Práctica 3">
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Conclusión</h2>
+
+<p>
+
+Las tablas permiten organizar grandes cantidades de información de forma clara y ordenada. Gracias a las etiquetas propias de HTML es posible crear estructuras fáciles de interpretar por los usuarios, mejorando la presentación de datos y facilitando la lectura dentro de cualquier sitio web.
+
 </p>
 
+</div>
+
+</div>
+
+<footer>
+
+Práctica 3 • Desarrollo Web con HTML
+
+</footer>
+
 </body>
+
 </html>

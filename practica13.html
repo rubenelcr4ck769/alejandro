@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Práctica 11 | Contadores en CSS</title>
+<title>Práctica 13 | Conexión PHP</title>
 
 <style>
 
@@ -79,7 +79,7 @@ text-align:justify;
 margin-bottom:15px;
 }
 
-/* IMAGENES */
+/* IMAGEN */
 .imagen{
 text-align:center;
 margin-top:20px;
@@ -90,7 +90,6 @@ width:100%;
 max-width:500px;
 border-radius:15px;
 box-shadow:0 8px 18px rgba(0,0,0,.20);
-margin-bottom:20px;
 transition:.4s;
 }
 
@@ -128,8 +127,8 @@ padding:22px;
 
 <header>
 
-<h1>📄 Práctica 11</h1>
-<p>Contadores CSS: Secciones y Listas Anidadas</p>
+<h1>📄 Práctica 13</h1>
+<p>Conexión a Base de Datos con PHP</p>
 
 </header>
 
@@ -141,44 +140,44 @@ padding:22px;
 <h2>Descripción de la práctica</h2>
 
 <p>
-En esta práctica se estudia el uso de los contadores en CSS para crear numeraciones automáticas en elementos HTML, como títulos y listas ordenadas, sin necesidad de escribir los números manualmente.
+En esta práctica se realiza la conexión entre PHP y una base de datos MySQL utilizando la función mysqli_connect.
 </p>
 
 </div>
 
-<!-- IMÁGENES -->
+<!-- IMAGEN -->
 <div class="card">
 
-<h2>Evidencias de la práctica</h2>
+<h2>Evidencia de la práctica</h2>
 
 <div class="imagen">
 
-<img src="practica11.jpg" alt="Practica 11 imagen 1">
-<img src="practica111.jpg" alt="Practica 11 imagen 2">
-<img src="practica112.jpg" alt="Practica 11 imagen 3">
+<img src="practica131.jpg" alt="Practica 13">
 
 </div>
 
 </div>
 
-<!-- EXPLICACIÓN -->
+<!-- CÓDIGO -->
 <div class="card">
 
-<h2>Explicación del código</h2>
+<h2>Código PHP</h2>
 
 <p>
-<strong>1. Contador básico en CSS</strong><br>
-Se utiliza counter-reset para iniciar un contador y counter-increment en h2 para generar numeración automática como “Sección 1, Sección 2…”.
-</p>
+&lt;?php<br><br>
 
-<p>
-<strong>2. Secciones y subsecciones</strong><br>
-Se manejan dos contadores: uno para secciones (h1) y otro para subsecciones (h2), generando formatos como 1.1, 1.2, 2.1, etc.
-</p>
+$conexion = mysqli_connect(<br>
+&nbsp;&nbsp;"127.0.0.1",<br>
+&nbsp;&nbsp;"root",<br>
+&nbsp;&nbsp;"pepitazos",<br>
+&nbsp;&nbsp;"3307"<br>
+);<br><br>
 
-<p>
-<strong>3. Listas anidadas</strong><br>
-Se usa counters() para generar numeración jerárquica en listas ordenadas, permitiendo estructuras como 1.1.1 o 2.3.1 automáticamente.
+if(!$conexion){<br>
+&nbsp;&nbsp;die("Error de conexión: " . mysqli_connect_error());<br>
+}<br><br>
+
+?&gt;
 </p>
 
 </div>
@@ -189,7 +188,7 @@ Se usa counters() para generar numeración jerárquica en listas ordenadas, perm
 <h2>Conclusión</h2>
 
 <p>
-El uso de contadores en CSS permite automatizar la numeración de contenido, lo que facilita la organización de estructuras complejas como títulos y listas anidadas, haciendo el código más limpio y eficiente.
+La conexión a una base de datos en PHP permite establecer comunicación entre el servidor web y MySQL para el manejo de información de manera dinámica.
 </p>
 
 </div>
@@ -198,7 +197,7 @@ El uso de contadores en CSS permite automatizar la numeración de contenido, lo 
 
 <footer>
 
-Práctica 11 • Desarrollo Web con CSS Counters
+Práctica 13 • PHP y Base de Datos
 
 </footer>
 

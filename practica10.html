@@ -1,133 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Práctica 10</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Práctica 10 | JavaScript Básico</title>
+
 <style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    margin: 20px 30px;
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(135deg,#eff6ff,#dbeafe);
+color:#333;
+line-height:1.8;
 }
-h1.titulo-practica{
-    font-size: 26px;
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#1d4ed8,#1e3a8a);
+color:white;
+text-align:center;
+padding:45px 20px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
-h2.subtitulo{
-    font-size: 20px;
-    margin-top: 36px;
+
+header h1{
+font-size:40px;
+margin-bottom:10px;
 }
+
+header p{
+font-size:18px;
+opacity:.95;
+}
+
+/* CONTENEDOR */
+.container{
+width:90%;
+max-width:1100px;
+margin:40px auto;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:35px;
+border-radius:18px;
+margin-bottom:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* TITULOS */
+h2{
+color:#1d4ed8;
+border-left:6px solid #2563eb;
+padding-left:12px;
+margin-bottom:20px;
+}
+
+/* TEXTO */
 p{
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: justify;
+font-size:17px;
+text-align:justify;
+margin-bottom:15px;
 }
-.ejemplo{
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 16px 20px;
-    margin: 14px 0 24px 0;
-    background-color: #f7f7f7;
+
+/* IMAGENES */
+.imagen{
+text-align:center;
+margin-top:20px;
 }
-.ejemplo h3{
-    margin-top: 0;
+
+.imagen img{
+width:100%;
+max-width:500px;
+border-radius:15px;
+box-shadow:0 8px 18px rgba(0,0,0,.20);
+margin-bottom:20px;
+transition:.4s;
 }
-#resultado, #demo1, #demo2{
-    font-weight: bold;
+
+.imagen img:hover{
+transform:scale(1.03);
 }
-#reloj{
-    font-size: 22px;
-    font-weight: bold;
-    color: #c8893a;
+
+/* FOOTER */
+footer{
+background:#1e3a8a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
 }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+.card{
+padding:22px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<h1 class="titulo-practica">Práctica 10: Bucles for...in, for...of y manejo de fechas en JavaScript</h1>
+<header>
 
-<h2 class="subtitulo">Ejemplo 1: Bucle for...in (recorrer un arreglo por índices)</h2>
-<div class="ejemplo">
-    <h3>Bucle For in</h3>
-    <p id="resultado"></p>
-</div>
+<h1>📄 Práctica 10</h1>
+<p>JavaScript: Fechas, bucles y arreglos</p>
 
-<h2 class="subtitulo">Ejemplo 2: Bucle for...of (recorrer los caracteres de un texto)</h2>
-<div class="ejemplo">
-    <h3>Bucle JavaScript For of</h3>
-    <p>La declaración for...of recorre los valores de cualquier objeto iterable:</p>
-    <p id="demo1"></p>
-</div>
+</header>
 
-<h2 class="subtitulo">Ejemplo 3: Bucle for...of (recorrer un arreglo de elementos)</h2>
-<div class="ejemplo">
-    <h3>Bucle JavaScript For of</h3>
-    <p>La declaración for...of recorre los valores de cualquier objeto iterable:</p>
-    <p id="demo2"></p>
-</div>
+<div class="container">
 
-<h2 class="subtitulo">Ejemplo 4: Ejercicio horas, minutos y segundos</h2>
-<div class="ejemplo">
-    <h3>Reloj con la fecha actual del sistema</h3>
-    <p id="reloj"></p>
-</div>
+<!-- DESCRIPCIÓN -->
+<div class="card">
 
-<h2 class="subtitulo">Explicación</h2>
+<h2>Descripción de la práctica</h2>
 
 <p>
-En esta práctica trabajamos con dos formas distintas de recorrer estructuras de datos en JavaScript.
-El bucle for...in recorre las propiedades enumerables de un objeto o, en el caso de un arreglo, sus
-índices (0, 1, 2, 3...), por eso en el primer ejemplo la variable x toma el valor del índice y hay
-que usar numbers[x] para obtener el dato real. En cambio, el bucle for...of recorre directamente los
-valores de un objeto iterable, ya sea un arreglo de elementos como los coches, o incluso una cadena
-de texto carácter por carácter, como se ve en el segundo ejemplo con el nombre "Sarai Martin". En
-ambos casos se va concatenando el resultado en una variable de texto y al final se inyecta en el
-documento usando innerHTML sobre un elemento con id específico. Por último, el cuarto ejemplo usa el
-objeto Date de JavaScript para obtener la hora, los minutos y los segundos actuales del sistema con
-getHours, getMinutes y getSeconds, y aplica una validación con if para anteponer un cero cuando el
-valor es menor a 10, logrando así un formato de reloj de dos dígitos como 09:05:03.
+En esta práctica se analizan diferentes ejemplos básicos de JavaScript, como la obtención de la hora del sistema, el uso de bucles for...of y for...in, y el recorrido de arreglos y cadenas de texto.
 </p>
 
-<script>
-// Ejemplo 1: for...in
-const numbers = [45, 4, 9, 16, 25];
-let txt = "";
-for (let x in numbers) {
-    txt += numbers[x] + " ";
-}
-document.getElementById("resultado").innerHTML = txt;
+</div>
 
-// Ejemplo 2: for...of con un string
-let language = "Sarai Martin";
-let text1 = "";
-for (let x of language) {
-    text1 += x + "<br>";
-}
-document.getElementById("demo1").innerHTML = text1;
+<!-- IMÁGENES -->
+<div class="card">
 
-// Ejemplo 3: for...of con un arreglo
-const coches = ["Nissan", "Chevrolet", "Ford"];
-let text2 = "";
-for (let x of coches) {
-    text2 += x + "<br>";
-}
-document.getElementById("demo2").innerHTML = text2;
+<h2>Evidencias de la práctica</h2>
 
-// Ejemplo 4: reloj con horas, minutos y segundos
-function actualizarReloj() {
-    var fecha = new Date();
-    var hora = fecha.getHours();
-    var minutos = fecha.getMinutes();
-    var segundos = fecha.getSeconds();
+<div class="imagen">
 
-    if (hora < 10) { hora = "0" + hora; }
-    if (minutos < 10) { minutos = "0" + minutos; }
-    if (segundos < 10) { segundos = "0" + segundos; }
+<img src="practica10.jpg" alt="Practica 10 imagen 1">
+<img src="practica101.jpg" alt="Practica 10 imagen 2">
+<img src="practica102.jpg" alt="Practica 10 imagen 3">
+<img src="practica103.jpg" alt="Practica 10 imagen 4">
 
-    document.getElementById("reloj").innerHTML = "Son las " + hora + ":" + minutos + ":" + segundos;
-}
-actualizarReloj();
-setInterval(actualizarReloj, 1000);
-</script>
+</div>
+
+</div>
+
+<!-- EXPLICACIÓN -->
+<div class="card">
+
+<h2>Explicación del código</h2>
+
+<p>
+<strong>1. Hora, minutos y segundos</strong><br>
+Se utiliza el objeto Date para obtener la hora actual del sistema. Luego se formatean los valores agregando un cero si son menores a 10.
+</p>
+
+<p>
+<strong>2. Bucle for...of con arreglos</strong><br>
+Recorre un arreglo de coches y muestra cada elemento uno por uno en pantalla.
+</p>
+
+<p>
+<strong>3. Bucle for...of con texto</strong><br>
+Permite recorrer cada carácter de una cadena de texto como si fuera un arreglo.
+</p>
+
+<p>
+<strong>4. Bucle for...in</strong><br>
+Recorre los índices de un arreglo, permitiendo acceder a cada valor mediante su posición.
+</p>
+
+</div>
+
+<!-- CONCLUSIÓN -->
+<div class="card">
+
+<h2>Conclusión</h2>
+
+<p>
+Estos ejercicios permiten comprender el uso básico de JavaScript para manipular datos, recorrer estructuras y mostrar información dinámica en una página web.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+Práctica 10 • Desarrollo Web con JavaScript
+
+</footer>
 
 </body>
+
 </html>
