@@ -1,290 +1,126 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html>
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Práctica 7 | Formularios con estilos CSS</title>
-
+<title>Práctica 7</title>
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:linear-gradient(135deg,#eff6ff,#dbeafe);
-color:#333;
-line-height:1.8;
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
 }
-
-header{
-background:linear-gradient(135deg,#1d4ed8,#1e3a8a);
-color:white;
-text-align:center;
-padding:45px 20px;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
+h1{
+    font-size: 26px;
 }
-
-header h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:18px;
-opacity:.95;
-}
-
-.container{
-width:90%;
-max-width:1100px;
-margin:40px auto;
-}
-
-.card{
-background:white;
-padding:35px;
-border-radius:18px;
-margin-bottom:35px;
-box-shadow:0 10px 25px rgba(0,0,0,.12);
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
 h2{
-color:#1d4ed8;
-border-left:6px solid #2563eb;
-padding-left:12px;
-margin-bottom:20px;
+    font-size: 20px;
+    margin-top: 30px;
 }
-
-h3{
-color:#2563eb;
-margin-top:20px;
-margin-bottom:12px;
-}
-
 p{
-font-size:17px;
-text-align:justify;
-margin-bottom:15px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
 }
-
-.info{
-background:#eff6ff;
-border-left:6px solid #2563eb;
-padding:20px;
-border-radius:10px;
-margin-top:20px;
+.cv-form{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px 25px;
+    max-width: 420px;
+    background-color: #f7f7f7;
 }
-
-.lista{
-background:#f8fafc;
-border:1px solid #d1d5db;
-border-radius:12px;
-padding:20px;
-margin-top:20px;
+.cv-form label{
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
 }
-
-.lista ul{
-margin-left:25px;
-line-height:2;
+.cv-form input[type="text"],
+.cv-form input[type="password"],
+.cv-form input[type="file"]{
+    width: 100%;
+    padding: 6px 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 3px;
 }
-
-.imagen{
-text-align:center;
-margin-top:20px;
+.cv-form .sexo{
+    margin-top: 6px;
 }
-
-.imagen img{
-width:100%;
-max-width:700px;
-border-radius:15px;
-box-shadow:0 8px 18px rgba(0,0,0,.20);
-transition:.4s;
+.cv-form .sexo label{
+    display: inline;
+    font-weight: normal;
+    margin-right: 15px;
 }
-
-.imagen img:hover{
-transform:scale(1.03);
+.cv-form .checkbox-line{
+    margin-top: 12px;
 }
-
-footer{
-background:#1e3a8a;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
+.cv-form .checkbox-line label{
+    display: inline;
+    font-weight: normal;
 }
-
-@media(max-width:768px){
-
-header h1{
-font-size:30px;
+.botones{
+    margin-top: 20px;
 }
-
-.card{
-padding:22px;
+.botones input{
+    margin-right: 8px;
+    padding: 6px 14px;
 }
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<header>
+<h1>Práctica 7: Creación de formularios con código HTML5</h1>
 
-<h1>📄 Práctica 7</h1>
+<h2>Formulario: Introducir Curriculum Vitae</h2>
 
-<p>Creación de Formularios con Estilos CSS</p>
+<form class="cv-form" action="/php/insertar_cv.php" method="POST">
 
-</header>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" maxlength="30">
 
-<div class="container">
+    <label for="apellidos">Apellidos</label>
+    <input type="text" id="apellidos" name="apellidos" maxlength="80">
 
-<div class="card">
+    <label for="contrasena">Contraseña</label>
+    <input type="password" id="contrasena" name="contrasena" maxlength="10">
 
-<h2>Descripción de la práctica</h2>
+    <label for="curp">CURP</label>
+    <input type="text" id="curp" name="curp" maxlength="18" pattern="[A-Za-z0-9]{18}">
 
-<p>
+    <div class="sexo">
+        <strong>Sexo</strong><br>
+        <label><input type="radio" name="sexo" value="hombre" checked> Hombre</label>
+        <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
+    </div>
 
-En esta práctica se desarrolla un formulario de registro utilizando HTML y CSS. El objetivo es combinar la estructura del formulario con un diseño visual moderno que facilite la captura de información por parte del usuario.
+    <label for="foto">Subir fotografía</label>
+    <input type="file" id="foto" name="foto">
 
-<br><br>
+    <div class="checkbox-line">
+        <label><input type="checkbox" name="boletin" checked> Suscribirme al boletín de novedades</label>
+    </div>
 
-Además de crear los diferentes campos del formulario, se aplican estilos mediante CSS para mejorar la apariencia de los controles, utilizando colores, bordes redondeados, espacios internos y efectos visuales que hacen más agradable la interacción con la página.
+    <div class="botones">
+        <input type="submit" value="Guardar cambios">
+        <input type="reset" value="Borrar los datos introducidos">
+    </div>
 
-</p>
+</form>
 
-<div class="info">
-
-<strong>Objetivo:</strong>
-
-Diseñar un formulario de registro funcional aplicando estilos CSS que mejoren su presentación, organización y experiencia de uso.
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Funcionamiento del HTML</h2>
-
-<p>
-
-El formulario se crea mediante la etiqueta <strong>&lt;form&gt;</strong>, utilizando los atributos <strong>action</strong>, <strong>method</strong> y <strong>enctype</strong> para permitir el envío de información y la carga de archivos.
-
-</p>
+<h2>Explicación</h2>
 
 <p>
-
-Se emplean etiquetas <strong>&lt;label&gt;</strong> para identificar cada campo y diferentes tipos de <strong>&lt;input&gt;</strong>, como <strong>text</strong>, <strong>password</strong>, <strong>file</strong> y <strong>submit</strong>, además del atributo <strong>placeholder</strong>, que muestra un texto de ayuda mientras el usuario no escribe información.
-
+Para este formulario elegimos el método POST en lugar de GET, ya que se están capturando datos
+sensibles como la contraseña y no queremos que viajen visibles en la URL del navegador. El atributo
+action apunta a la carpeta php del servidor, al archivo insertar_cv.php, que sería el encargado de
+procesar la información en el backend. Usamos el atributo maxlength para limitar el nombre a 30
+caracteres, los apellidos a 80 y la contraseña a 10, tal como lo pedía el ejercicio. Para el CURP
+se definió un patrón de 18 caracteres alfanuméricos, que es la longitud real de este documento en
+México. El checkbox del boletín de novedades se dejó marcado por defecto usando el atributo checked.
+Finalmente se agregaron los tres botones solicitados: el campo de tipo file para subir la fotografía,
+un botón submit para guardar los cambios y un botón reset para borrar todo lo que el usuario haya
+introducido.
 </p>
-
-</div>
-
-<div class="card">
-
-<h2>Funcionamiento del CSS</h2>
-
-<p>
-
-Las reglas CSS permiten aplicar estilos a todos los controles del formulario mediante selectores específicos.
-
-</p>
-
-<p>
-
-Se utilizan propiedades como <strong>width</strong> para definir el ancho de los campos, <strong>padding</strong> para agregar espacio interno, <strong>border-radius</strong> para redondear las esquinas y <strong>box-sizing</strong> para mantener un tamaño uniforme.
-
-</p>
-
-<p>
-
-También se aplican estilos al botón de envío y el efecto <strong>:hover</strong>, que cambia su color cuando el usuario coloca el cursor sobre él, mejorando la interacción visual.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Etiquetas y propiedades utilizadas</h2>
-
-<div class="lista">
-
-<ul>
-
-<li><strong>&lt;form&gt;</strong> → Define el formulario.</li>
-
-<li><strong>&lt;label&gt;</strong> → Describe cada campo.</li>
-
-<li><strong>&lt;input&gt;</strong> → Crea cajas de texto, contraseña, archivos y botones.</li>
-
-<li><strong>placeholder</strong> → Muestra un texto de ayuda.</li>
-
-<li><strong>width</strong> → Define el ancho de los elementos.</li>
-
-<li><strong>padding</strong> → Agrega espacio interno.</li>
-
-<li><strong>border-radius</strong> → Redondea las esquinas.</li>
-
-<li><strong>box-sizing</strong> → Mantiene el tamaño correcto de los elementos.</li>
-
-<li><strong>:hover</strong> → Aplica un efecto al pasar el cursor.</li>
-
-<li><strong>background-color</strong> → Define el color de fondo.</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Evidencia de la práctica</h2>
-
-<div class="imagen">
-
-<img src="practica7.jpg" alt="Práctica 7">
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Conclusión</h2>
-
-<p>
-
-La combinación de HTML y CSS permite crear formularios visualmente atractivos y funcionales. Gracias al uso de estilos es posible mejorar la experiencia del usuario, haciendo que los formularios sean más claros, organizados y profesionales, sin afectar la estructura del contenido.
-
-</p>
-
-</div>
-
-</div>
-
-<footer>
-
-Práctica 7 • Desarrollo Web con HTML y CSS
-
-</footer>
 
 </body>
-
 </html>

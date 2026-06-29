@@ -1,245 +1,47 @@
-﻿<!DOCTYPE html>
-<html lang="es">
-
+<!DOCTYPE html>
+<html>
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Práctica 2 | Listas en HTML</title>
-
+<title>Práctica 2</title>
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:linear-gradient(135deg,#eef2ff,#dbeafe);
-color:#333;
-line-height:1.8;
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
 }
-
-header{
-background:linear-gradient(135deg,#2563eb,#1d4ed8);
-color:white;
-text-align:center;
-padding:45px 20px;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
+h1{
+    font-size: 26px;
 }
-
-header h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:18px;
-}
-
-.container{
-width:90%;
-max-width:1100px;
-margin:40px auto;
-}
-
-.card{
-background:white;
-padding:35px;
-border-radius:18px;
-margin-bottom:35px;
-box-shadow:0 10px 25px rgba(0,0,0,.12);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
 h2{
-color:#1d4ed8;
-margin-bottom:18px;
-border-left:6px solid #2563eb;
-padding-left:12px;
+    font-size: 20px;
+    margin-top: 30px;
 }
-
+img{
+    max-width: 100%;
+    border: 1px solid #ccc;
+    margin: 6px 0;
+}
 p{
-font-size:17px;
-text-align:justify;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
 }
-
-.imagen{
-text-align:center;
-margin-top:25px;
-}
-
-.imagen img{
-width:100%;
-max-width:650px;
-border-radius:15px;
-box-shadow:0 8px 18px rgba(0,0,0,.20);
-transition:.4s;
-}
-
-.imagen img:hover{
-transform:scale(1.03);
-}
-
-.info{
-background:#eff6ff;
-padding:20px;
-margin-top:25px;
-border-left:6px solid #2563eb;
-border-radius:10px;
-}
-
-.codigo{
-background:#f8fafc;
-padding:20px;
-border-radius:12px;
-margin-top:25px;
-border:1px solid #d1d5db;
-}
-
-.codigo ul{
-margin-left:25px;
-}
-
-.codigo li{
-margin-bottom:10px;
-}
-
-footer{
-background:#1e3a8a;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
-}
-
-@media(max-width:768px){
-
-header h1{
-font-size:30px;
-}
-
-.card{
-padding:22px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<header>
+<h1>Práctica 2: Listas en HTML</h1>
 
-<h1>Práctica 2</h1>
+<img src="practica2.png" width="500">
 
-<p>Listas en HTML</p>
-
-</header>
-
-<div class="container">
-
-<div class="card">
-
-<h2>Descripción de la práctica</h2>
+<h2>Explicación</h2>
 
 <p>
-
-En esta práctica se trabaja con la creación y organización de listas utilizando HTML. Las listas permiten presentar información de una forma ordenada y fácil de comprender, siendo uno de los elementos más utilizados dentro del desarrollo web.
-
-<br><br>
-
-La etiqueta <strong>&lt;ol&gt;</strong> permite crear listas ordenadas mostrando automáticamente una numeración para cada elemento, mientras que la etiqueta <strong>&lt;ul&gt;</strong> crea listas no ordenadas utilizando viñetas.
-
-<br><br>
-
-Dentro de ambos tipos de listas se utiliza la etiqueta <strong>&lt;li&gt;</strong>, la cual representa cada elemento individual de la lista.
-
-<br><br>
-
-También se emplean las listas de definición mediante las etiquetas <strong>&lt;dl&gt;</strong>, <strong>&lt;dt&gt;</strong> y <strong>&lt;dd&gt;</strong>, donde <strong>&lt;dl&gt;</strong> define la lista completa, <strong>&lt;dt&gt;</strong> representa el término y <strong>&lt;dd&gt;</strong> contiene la descripción correspondiente.
-
-<br><br>
-
-Estas etiquetas ayudan a organizar información de forma clara, mejorando la presentación y facilitando la lectura para el usuario.
-
-<div class="info">
-
-<strong>Objetivo:</strong>
-
-Aprender a utilizar correctamente los diferentes tipos de listas que ofrece HTML para organizar información de manera estructurada dentro de una página web.
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Etiquetas utilizadas</h2>
-
-<div class="codigo">
-
-<ul>
-
-<li><strong>&lt;ol&gt;</strong> → Crea listas ordenadas.</li>
-
-<li><strong>&lt;ul&gt;</strong> → Crea listas con viñetas.</li>
-
-<li><strong>&lt;li&gt;</strong> → Representa un elemento de la lista.</li>
-
-<li><strong>&lt;dl&gt;</strong> → Define una lista de definiciones.</li>
-
-<li><strong>&lt;dt&gt;</strong> → Indica el término.</li>
-
-<li><strong>&lt;dd&gt;</strong> → Muestra la descripción del término.</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Evidencia de la práctica</h2>
-
-<div class="imagen">
-
-<img src="practica2.jpg" alt="Práctica 2">
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Conclusión</h2>
-
-<p>
-
-Las listas son herramientas fundamentales dentro de HTML porque permiten organizar el contenido de una página de manera clara y ordenada. Gracias al uso de listas ordenadas, no ordenadas y de definición, es posible presentar información de forma más comprensible, mejorando tanto la estructura del documento como la experiencia del usuario al navegar por el sitio web.
-
+El objetivo aquí fue aprender a ordenar información en forma de lista. Usamos ol para listas
+numeradas (con orden) y ul para listas con viñetas o puntos (sin orden), metiendo cada elemento con
+la etiqueta li. También probamos las etiquetas dl, dt y dd para hacer listas de definiciones, que
+sirven para poner un concepto y su explicación abajo.
 </p>
 
-</div>
-
-</div>
-
-<footer>
-
-Práctica 2 • Desarrollo Web con HTML
-
-</footer>
-
 </body>
-
 </html>

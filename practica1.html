@@ -1,210 +1,49 @@
-﻿<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Práctica 1 | Etiquetas básicas de HTML</title>
-
+<title>Práctica 1</title>
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(135deg,#eef2ff,#dbeafe);
-    color:#333;
-    line-height:1.8;
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
 }
-
-header{
-    background:linear-gradient(135deg,#2563eb,#1d4ed8);
-    color:white;
-    padding:45px 20px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
+h1{
+    font-size: 26px;
 }
-
-header h1{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-header p{
-    font-size:18px;
-    opacity:.95;
-}
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:40px auto;
-}
-
-.card{
-    background:white;
-    padding:35px;
-    border-radius:18px;
-    margin-bottom:35px;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-    transition:.35s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
 h2{
-    color:#1d4ed8;
-    margin-bottom:18px;
-    border-left:6px solid #2563eb;
-    padding-left:12px;
+    font-size: 20px;
+    margin-top: 30px;
 }
-
+img{
+    max-width: 100%;
+    border: 1px solid #ccc;
+    margin: 6px 0;
+}
 p{
-    text-align:justify;
-    font-size:17px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
 }
-
-.galeria{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.galeria img{
-    width:100%;
-    border-radius:15px;
-    box-shadow:0 8px 18px rgba(0,0,0,.20);
-    transition:.4s;
-}
-
-.galeria img:hover{
-    transform:scale(1.03);
-}
-
-.info{
-    background:#eff6ff;
-    border-left:6px solid #2563eb;
-    padding:20px;
-    border-radius:10px;
-    margin-top:25px;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    background:#1e3a8a;
-    color:white;
-    margin-top:40px;
-}
-
-@media(max-width:768px){
-
-header h1{
-    font-size:30px;
-}
-
-.card{
-    padding:22px;
-}
-
-p{
-    font-size:16px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<header>
+<h1>Práctica 1: Etiquetas básicas de HTML</h1>
 
-<h1>Práctica 1</h1>
+<img src="practica1.png" width="500"><br><br>
+<img src="practica12.png" width="500"><br><br>
+<img src="practica13.png" width="500">
 
-<p>Etiquetas básicas de HTML</p>
-
-</header>
-
-<div class="container">
-
-<div class="card">
-
-<h2>Descripción de la práctica</h2>
+<h2>Explicación</h2>
 
 <p>
-
-En esta práctica se estudian las etiquetas básicas de HTML que permiten construir la estructura inicial de una página web. Se utilizan las etiquetas <strong>h1, h2, h3, h4, h5 y h6</strong> para crear títulos de distintos tamaños e importancia dentro del documento.
-
-<br><br>
-
-También se emplea la etiqueta <strong>p</strong> para crear párrafos y organizar la información de manera clara.
-
-<br><br>
-
-Para modificar la apariencia del texto se utiliza la etiqueta <strong>font</strong>, permitiendo cambiar el tamaño, color y tipo de letra.
-
-<br><br>
-
-La etiqueta <strong>a</strong> se utiliza para crear enlaces que pueden dirigir al usuario hacia otras páginas web, archivos locales o diferentes secciones dentro de la misma página. Además, se utilizan anclas mediante el atributo <strong>name</strong> para facilitar la navegación interna.
-
-<br><br>
-
-La etiqueta <strong>img</strong> permite insertar imágenes en la página web. Mediante atributos como <strong>src</strong>, <strong>width</strong>, <strong>height</strong> y <strong>alt</strong> se puede definir la ubicación, tamaño y descripción de cada imagen.
-
+En esta primera práctica vimos la estructura más básica de una página web. Aprendimos a usar los h1
+h6 para poner títulos de diferentes tamaños e importancia, y la etiqueta p para separar los textos
+en párrafos. También usamos la etiqueta a para crear enlaces a otros sitios y la etiqueta img para
+meter imágenes usando su atributo src para buscar el archivo.
 </p>
-
-<div class="info">
-
-<strong>Objetivo:</strong>
-
-Comprender el funcionamiento de las principales etiquetas de HTML y aprender cómo contribuyen a la estructura, organización y presentación visual de una página web.
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Evidencias de la práctica</h2>
-
-<div class="galeria">
-
-<img src="practica1.jpg" alt="Práctica 1">
-
-<img src="practica12.jpg" alt="Práctica 1">
-
-<img src="practica13.jpg" alt="Práctica 1">
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Conclusión</h2>
-
-<p>
-
-Las etiquetas básicas de HTML constituyen la base para el desarrollo de cualquier sitio web. Gracias a ellas es posible organizar correctamente la información, insertar imágenes, crear enlaces y estructurar el contenido de manera clara y ordenada. Dominar estas etiquetas representa el primer paso para crear páginas web funcionales y con una presentación profesional.
-
-</p>
-
-</div>
-
-</div>
-
-<footer>
-
-Práctica 1 • Desarrollo Web con HTML
-
-</footer>
 
 </body>
 </html>

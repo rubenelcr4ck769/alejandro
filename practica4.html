@@ -1,268 +1,52 @@
-﻿<!DOCTYPE html>
-<html lang="es">
-
+<!DOCTYPE html>
+<html>
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Práctica 4 | Formularios HTML</title>
-
+<title>Práctica 4</title>
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:linear-gradient(135deg,#faf5ff,#ede9fe);
-color:#333;
-line-height:1.8;
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
 }
-
-header{
-background:linear-gradient(135deg,#7c3aed,#5b21b6);
-color:white;
-padding:45px 20px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
+h1{
+    font-size: 26px;
 }
-
-header h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:18px;
-}
-
-.container{
-width:90%;
-max-width:1150px;
-margin:40px auto;
-}
-
-.card{
-background:white;
-padding:35px;
-border-radius:18px;
-margin-bottom:35px;
-box-shadow:0 10px 25px rgba(0,0,0,.12);
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
 h2{
-color:#6d28d9;
-margin-bottom:18px;
-padding-left:12px;
-border-left:6px solid #7c3aed;
+    font-size: 20px;
+    margin-top: 30px;
 }
-
+img{
+    max-width: 100%;
+    border: 1px solid #ccc;
+    margin: 6px 0;
+}
 p{
-font-size:17px;
-text-align:justify;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
 }
-
-.info{
-background:#f5f3ff;
-border-left:6px solid #7c3aed;
-padding:20px;
-border-radius:10px;
-margin-top:25px;
-}
-
-.galeria{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-margin-top:20px;
-}
-
-.galeria img{
-width:100%;
-border-radius:15px;
-box-shadow:0 8px 18px rgba(0,0,0,.2);
-transition:.4s;
-}
-
-.galeria img:hover{
-transform:scale(1.03);
-}
-
-form{
-
-margin-top:20px;
-
-}
-
-label{
-font-weight:bold;
-display:block;
-margin-top:18px;
-}
-
-input,
-select,
-textarea{
-
-width:100%;
-padding:12px;
-margin-top:8px;
-border-radius:8px;
-border:1px solid #cbd5e1;
-font-size:15px;
-
-}
-
-textarea{
-resize:vertical;
-height:120px;
-}
-
-.botones{
-margin-top:25px;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-button{
-padding:12px 28px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-size:15px;
-transition:.3s;
-}
-
-.enviar{
-background:#7c3aed;
-color:white;
-}
-
-.enviar:hover{
-background:#5b21b6;
-}
-
-.limpiar{
-background:#e5e7eb;
-}
-
-.limpiar:hover{
-background:#d1d5db;
-}
-
-footer{
-background:#4c1d95;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
-}
-
-@media(max-width:768px){
-
-header h1{
-font-size:30px;
-}
-
-.card{
-padding:22px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<header>
+<h1>Práctica 4: Formularios HTML</h1>
 
-<h1>Práctica 4</h1>
+<img src="practica4.png" width="500">
 
-<p>Formularios en HTML</p>
-
-</header>
-
-<div class="container">
-
-<div class="card">
-
-<h2>Descripción de la práctica</h2>
+<h2>Explicación</h2>
 
 <p>
-
-En esta práctica se estudia la creación de formularios utilizando HTML para recopilar información de los usuarios. La estructura principal se desarrolla mediante la etiqueta <strong>&lt;form&gt;</strong>, la cual contiene todos los elementos del formulario.
-
-<br><br>
-
-Se utiliza la etiqueta <strong>&lt;input&gt;</strong> en diferentes tipos, como <strong>text</strong> para capturar texto, <strong>password</strong> para ocultar caracteres, <strong>radio</strong> para seleccionar una única opción, <strong>checkbox</strong> para seleccionar varias opciones, <strong>submit</strong> para enviar la información y <strong>reset</strong> para restablecer los datos del formulario.
-
-<br><br>
-
-También se emplean las etiquetas <strong>&lt;textarea&gt;</strong> para introducir textos largos y <strong>&lt;select&gt;</strong> junto con <strong>&lt;option&gt;</strong> para crear listas desplegables.
-
+En esta práctica nos enfocamos en crear un puente de comunicación directa entre el usuario y nuestra
+página web utilizando la etiqueta principal form. Aprendimos que la etiqueta input es fundamental y
+versátil, ya que cambiando su tipo (type) podemos capturar información de muchas maneras: usamos text
+para nombres o datos simples, password para ocultar de la vista los caracteres confidenciales, y botones
+tipo radio o checkbox para cuando el usuario debe elegir entre una o varias opciones prefijadas.
+Además de estos campos, añadimos la etiqueta textarea que es perfecta para cuando la gente necesita
+escribir comentarios o textos más largos, y el combo de select con option para armar un menú desplegable
+muy limpio. Todo esto se complementa con botones especiales para enviar la información recopilada o
+limpiar por completo el formulario para volver a empezar.
 </p>
-
-<div class="info">
-
-<strong>Objetivo:</strong>
-
-Aprender a diseñar formularios funcionales que permitan capturar y gestionar información de manera organizada dentro de una página web.
-
-</div>
-
-</div>
-
-
-</form>
-
-</div>
-
-<div class="card">
-
-<h2>Evidencias de la práctica</h2>
-
-<div class="galeria">
-
-<img src="practica4.jpg" alt="Práctica 4">
-
-<img src="practica41.jpg" alt="Práctica 4">
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Conclusión</h2>
-
-<p>
-
-Los formularios representan uno de los elementos más importantes del desarrollo web, ya que permiten la interacción entre el usuario y la página. Gracias a los diferentes tipos de controles disponibles en HTML es posible recopilar información de manera eficiente, organizada y sencilla, siendo la base de sistemas como registros, inicios de sesión, encuestas y formularios de contacto.
-
-</p>
-
-</div>
-
-</div>
-
-<footer>
-
-Práctica 4 • Desarrollo Web con HTML
-
-</footer>
 
 </body>
-
 </html>

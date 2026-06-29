@@ -1,242 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html>
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Práctica 5 | Aplicación de estilos con CSS</title>
-
+<title>Practica 5</title>
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:linear-gradient(135deg,#ecfeff,#cffafe);
-color:#333;
-line-height:1.8;
+    font-family: Arial, sans-serif;
+    margin: 20px 30px;
 }
-
-header{
-background:linear-gradient(135deg,#0891b2,#155e75);
-color:white;
-text-align:center;
-padding:45px 20px;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
+h1{
+    font-size: 26px;
 }
-
-header h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:18px;
-}
-
-.container{
-width:90%;
-max-width:1100px;
-margin:40px auto;
-}
-
-.card{
-background:white;
-padding:35px;
-border-radius:18px;
-margin-bottom:35px;
-box-shadow:0 10px 25px rgba(0,0,0,.12);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
 h2{
-color:#0f766e;
-margin-bottom:18px;
-padding-left:12px;
-border-left:6px solid #06b6d4;
+    font-size: 20px;
+    margin-top: 30px;
 }
-
+img{
+    max-width: 100%;
+    border: 1px solid #ccc;
+    margin: 6px 0;
+}
 p{
-font-size:17px;
-text-align:justify;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
 }
-
-.info{
-background:#ecfeff;
-border-left:6px solid #06b6d4;
-padding:20px;
-border-radius:10px;
-margin-top:25px;
-}
-
-.lista{
-background:#f8fafc;
-padding:20px;
-border-radius:12px;
-margin-top:20px;
-border:1px solid #d1d5db;
-}
-
-.lista ul{
-margin-left:25px;
-line-height:2;
-}
-
-.imagen{
-text-align:center;
-margin-top:20px;
-}
-
-.imagen img{
-width:100%;
-max-width:700px;
-border-radius:15px;
-box-shadow:0 8px 18px rgba(0,0,0,.20);
-transition:.4s;
-}
-
-.imagen img:hover{
-transform:scale(1.03);
-}
-
-footer{
-background:#164e63;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
-}
-
-@media(max-width:768px){
-
-header h1{
-font-size:30px;
-}
-
-.card{
-padding:22px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<header>
+<h1>Practica 5: Aplicacion de estilos con CSS</h1>
 
-<h1>Práctica 5</h1>
+<img src="practica5.png" width="500">
 
-<p>Aplicación de estilos con CSS</p>
-
-</header>
-
-<div class="container">
-
-<div class="card">
-
-<h2>Descripción de la práctica</h2>
+<h2>Explicacion</h2>
 
 <p>
-
-En esta práctica se introduce el uso de las hojas de estilo en cascada (CSS) mediante el archivo <strong>practica5.css</strong>. CSS permite separar el contenido HTML del diseño visual de la página, facilitando su mantenimiento, organización y personalización.
-
-<br><br>
-
-Se utilizan diferentes selectores para aplicar estilos a los elementos HTML y modificar propiedades como <strong>color</strong> para cambiar el color del texto, <strong>background-color</strong> para establecer colores de fondo, <strong>font-size</strong> para ajustar el tamaño de la letra y <strong>font-family</strong> para cambiar el tipo de fuente.
-
-<br><br>
-
-También se emplean propiedades como <strong>margin</strong> y <strong>padding</strong> para controlar los espacios entre los diferentes elementos de la página. Además, se implementa un menú de navegación utilizando las etiquetas <strong>&lt;ul&gt;</strong>, <strong>&lt;li&gt;</strong> y <strong>&lt;a&gt;</strong>, permitiendo acceder a distintas secciones del sitio web.
-
+Aquí dimos un gran salto visual al dejar de lado las páginas en blanco y negro para empezar a darles
+diseño mediante un archivo externo llamado practica5.css. La gran ventaja de esto es que pudimos separar
+el código que da estructura (HTML) del código que se encarga del diseño (CSS). Aprendimos a utilizar
+propiedades esenciales como color para cambiar el tono de las letras, background-color para pintar los
+fondos de los bloques, y font-family o font-size para darle estilo y jerarquía al texto. También fue
+clave entender cómo funcionan el margin y el padding, que nos sirven para empujar los elementos y
+controlar los espacios en blanco alrededor de ellos. Por último, aprovechamos estos estilos para
+transformar una lista normal hecha con ul y li en un menú de navegación interactivo con enlaces (a)
+mucho más atractivo.
 </p>
-
-<div class="info">
-
-<strong>Objetivo:</strong>
-
-Aprender a mejorar la apariencia, organización y presentación visual de una página web mediante el uso de hojas de estilo CSS, aplicando diferentes propiedades y selectores.
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Propiedades y etiquetas utilizadas</h2>
-
-<div class="lista">
-
-<ul>
-
-<li><strong>color</strong> → Cambia el color del texto.</li>
-
-<li><strong>background-color</strong> → Define el color de fondo.</li>
-
-<li><strong>font-size</strong> → Modifica el tamaño de la letra.</li>
-
-<li><strong>font-family</strong> → Cambia el tipo de fuente.</li>
-
-<li><strong>margin</strong> → Agrega espacio exterior entre elementos.</li>
-
-<li><strong>padding</strong> → Agrega espacio interior en los elementos.</li>
-
-<li><strong>&lt;ul&gt;</strong> → Crea listas para el menú.</li>
-
-<li><strong>&lt;li&gt;</strong> → Define cada elemento del menú.</li>
-
-<li><strong>&lt;a&gt;</strong> → Crea enlaces de navegación.</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Evidencia de la práctica</h2>
-
-<div class="imagen">
-
-<img src="practica5.jpg" alt="Práctica 5">
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Conclusión</h2>
-
-<p>
-
-El uso de CSS permite mejorar significativamente la apariencia de una página web sin modificar su estructura HTML. Gracias a las hojas de estilo es posible crear sitios más atractivos, organizados y fáciles de mantener, logrando una mejor experiencia para el usuario y una mayor flexibilidad en el diseño.
-
-</p>
-
-</div>
-
-</div>
-
-<footer>
-
-Práctica 5 • Desarrollo Web con HTML y CSS
-
-</footer>
 
 </body>
-
 </html>
